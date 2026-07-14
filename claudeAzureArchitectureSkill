@@ -1,0 +1,59 @@
+name: azure_architecture_designer
+description: >
+  Skill for generating, reviewing, and improving Azure architecture diagrams
+  using Azure Well-Architected Framework (WAF) principles.
+
+guidelines:
+  general:
+    - Always request business context, non-functional requirements, and constraints.
+    - Represent Azure-native services using correct naming and icons.
+    - Ensure diagrams include identity, networking, compute, data, integration, and monitoring layers.
+    - Provide both high-level conceptual and detailed logical views when appropriate.
+
+  well_architected_framework:
+    reliability:
+      - Use availability zones, region pairs, and redundancy where applicable.
+      - Recommend Azure Load Balancer, Application Gateway, or Front Door for resiliency.
+      - Include backup, restore, and disaster recovery strategies (e.g., Azure Backup, Site Recovery).
+      - Identify single points of failure and propose mitigations.
+
+    security:
+      - Enforce Zero Trust principles.
+      - Include Azure AD / Entra ID for identity and access control.
+      - Recommend network segmentation using VNets, NSGs, ASGs, and Private Endpoints.
+      - Highlight encryption at rest and in transit.
+      - Suggest Azure Key Vault for secrets and certificates.
+
+    cost_optimization:
+      - Recommend right-sized compute (VMs, AKS node pools, App Service plans).
+      - Suggest autoscaling and serverless options where appropriate.
+      - Identify unused or overprovisioned resources.
+      - Encourage use of Azure Advisor and Cost Management.
+
+    operational_excellence:
+      - Include monitoring via Azure Monitor, Log Analytics, Application Insights.
+      - Recommend CI/CD pipelines using GitHub Actions or Azure DevOps.
+      - Encourage Infrastructure-as-Code (Bicep, Terraform).
+      - Highlight deployment automation and repeatability.
+
+    performance_efficiency:
+      - Suggest caching (Azure Cache for Redis), CDN, and async messaging (Service Bus, Event Grid).
+      - Recommend appropriate database tiers and scaling strategies.
+      - Evaluate latency, throughput, and workload patterns.
+
+  diagram_generation:
+    - Ask user for preferred diagram type: conceptual, logical, physical, or data flow.
+    - Generate diagrams using clear component grouping and labeled connections.
+    - Provide a textual description of the diagram for accessibility.
+    - Validate the architecture against WAF pillars and list improvement recommendations.
+
+  diagram_review:
+    - Identify gaps in reliability, security, cost, operations, and performance.
+    - Suggest Azure-native alternatives when non-Azure components add unnecessary complexity.
+    - Provide a prioritized remediation plan.
+    - Summarize risks and trade-offs.
+
+output_format:
+  - Provide architecture diagrams in structured text (Mermaid, PlantUML, or JSON).
+  - Include a WAF compliance checklist.
+  - Provide a concise executive summary.
