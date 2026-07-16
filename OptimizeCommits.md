@@ -25,9 +25,9 @@ flowchart LR
     E --> F[GitHub Repo]
 
     classDef tokens fill:#f5f5f5,stroke:#333,stroke-width:1px;
-    B:::tokens
-    C:::tokens
-    D:::tokens
+    class B tokens;
+    class C tokens;
+    class D tokens;
 ```
 
 # Slide 3 — Path‑1: Skills
@@ -47,8 +47,8 @@ flowchart LR
     D --> E[GitHub]
 
     classDef lowTokens fill:#d4f4dd,stroke:#2b7a2f;
-    B:::lowTokens
-    C:::lowTokens
+    class B lowTokens;
+    class C lowTokens;
 ```
 
 # Slide 4 — Path‑2: GitHub CLI Tool
@@ -67,7 +67,7 @@ flowchart LR
     C --> D[GitHub]
 
     classDef fewerTokens fill:#d0e8ff,stroke:#1a4e80;
-    C:::fewerTokens
+    class C fewerTokens;
 ```
 
 # Slide 5 — Path‑3: MCP (Model Context Protocol)
@@ -90,8 +90,8 @@ flowchart LR
     D --> E[GitHub]
 
     classDef minimalTokens fill:#fff2cc,stroke:#b38f00;
-    C:::minimalTokens
-    D:::minimalTokens
+    class C minimalTokens;
+    class D minimalTokens;
 ```
 
 # Slide 6 — Token Efficiency Ranking
