@@ -1,4 +1,4 @@
-# Slide 1 — Cover
+# Slide 1
 ## **How Claude Code Commits to GitHub**
 …and how to dramatically reduce token usage.
 
@@ -28,6 +28,7 @@ flowchart LR
     B:::tokens
     C:::tokens
     D:::tokens
+```
 
 # Slide 3 — Path‑1: Skills
 Skills = Lean Context Automation
@@ -38,6 +39,7 @@ Output ↓
 Reasoning ↓
 Context ↓
 
+```mermaid
 flowchart LR
     A[User] --> B[Skill Module]
     B --> C[Claude]
@@ -47,6 +49,7 @@ flowchart LR
     classDef lowTokens fill:#d4f4dd,stroke:#2b7a2f;
     B:::lowTokens
     C:::lowTokens
+```
 
 # Slide 4 — Path‑2: GitHub CLI Tool
 CLI Tools = Offloading Git Logic
@@ -57,6 +60,7 @@ Output ↓
 Reasoning ↓↓↓
 Context steady
 
+```mermaid
 flowchart LR
     A[User] --> B[Claude]
     B --> C[CLI Tool]
@@ -64,6 +68,7 @@ flowchart LR
 
     classDef fewerTokens fill:#d0e8ff,stroke:#1a4e80;
     C:::fewerTokens
+```
 
 # Slide 5 — Path‑3: MCP (Model Context Protocol)
 MCP = Lowest Token Usage
@@ -77,6 +82,7 @@ Reasoning ↓↓↓↓
 
 Context minimal
 
+```mermaid
 flowchart LR
     A[User] --> B[Claude]
     B --> C[MCP Request (Tiny JSON)]
@@ -86,12 +92,15 @@ flowchart LR
     classDef minimalTokens fill:#fff2cc,stroke:#b38f00;
     C:::minimalTokens
     D:::minimalTokens
+```
 
 # Slide 6 — Token Efficiency Ranking
+```mermaid
 graph TD
     A[MCP<br/>⭐⭐⭐⭐⭐] -->|Most Efficient| Z[Token Savings]
     B[CLI Tool<br/>⭐⭐⭐⭐] --> Z
     C[Skills<br/>⭐⭐⭐] --> Z
+```
 
 # Slide 7 — Final Takeaway
 For maximum token efficiency → Choose MCP  
