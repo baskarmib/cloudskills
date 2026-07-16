@@ -32,11 +32,15 @@ flowchart LR
 
 # Slide 3 — Path‑1: Skills
 Skills = Lean Context Automation
+
 Token Flow:
 
 Input ↓
+
 Output ↓
+
 Reasoning ↓
+
 Context ↓
 
 ```mermaid
@@ -53,11 +57,15 @@ flowchart LR
 
 # Slide 4 — Path‑2: GitHub CLI Tool
 CLI Tools = Offloading Git Logic
+
 Token Flow:
 
 Input ↓
+
 Output ↓
+
 Reasoning ↓↓↓
+
 Context steady
 
 ```mermaid
@@ -72,6 +80,7 @@ flowchart LR
 
 # Slide 5 — Path‑3: MCP (Model Context Protocol)
 MCP = Lowest Token Usage
+
 Token Flow:
 
 Input ↓↓↓
@@ -85,7 +94,7 @@ Context minimal
 ```mermaid
 flowchart LR
     A[User] --> B[Claude]
-    B --> C[MCP Request (Tiny JSON)]
+    B --> C[MCP Request]
     C --> D[MCP Server]
     D --> E[GitHub]
 
